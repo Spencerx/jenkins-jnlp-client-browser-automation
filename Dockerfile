@@ -11,4 +11,4 @@ RUN chmod +x /run.sh
 
 ENV DISPLAY :10
 
-ENTRYPOINT /run.sh
+ENTRYPOINT ["/run.sh"]
