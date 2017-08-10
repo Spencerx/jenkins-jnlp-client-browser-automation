@@ -1,10 +1,9 @@
-FROM goloxxly/jenkins-jnlp-client-gradle
+FROM goloxxly/jenkins-jnlp-client-gradle:3.1.0
 
 LABEL maintainer "gyorgy.novak@openplus.co.uk"
 
-RUN yum -y update
-RUN yum install -y Xvfb firefox
-RUN yum -y clean all
+RUN yum install -y Xvfb firefox \
+    && yum -y clean all
 
 ADD run.sh /
 RUN chmod +x /run.sh
